@@ -1,3 +1,304 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  color: #fff;
+  font-family: "Source Sans Pro";
+}
+
+.container {
+  max-width: 1601px;
+  width: 100%;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.over-layer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.national-geo-page {
+  height: 100%;
+  padding: 1rem;
+  background-color: #000;
+  overflow: hidden;
+}
+
+header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu nav {
+  margin-right: 6rem;
+}
+
+.nav-menu li {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  text-transform: capitalize;
+}
+
+.nav-menu li:hover {
+  cursor: pointer;
+}
+
+.nav-menu li.active {
+  position: relative;
+  color: yellow;
+}
+
+.nav-menu li.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  left: calc((100% - 20px) / 2);
+  background-color: yellow;
+}
+
+.nav-menu button {
+  padding: 0.25rem;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main__section-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.main__section-text h3 {
+  font-size: 2.29831rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main__section-text h1 {
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.main__section-text p {
+  text-align: center;
+  font-family: Source Sans Pro;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2.44819rem; /* 279.794% */
+  letter-spacing: 0.79375rem;
+  text-transform: uppercase;
+}
+
+.main__section .main__section-img {
+  width: 90%;
+  margin-left: 20%;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative;
+  top: -5rem;
+}
+
+.footer__text {
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+.footer__text > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #fff;
+  padding-right: 2rem;
+}
+
+.footer__text > div:first-child h3 {
+  text-align: center;
+  font-family: Source Sans Pro;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.footer__text > div:last-child {
+  width: 24rem;
+  padding-left: 2rem;
+  font-size: 12px;
+}
+
+.footer__img-container {
+  width: 350px;
+  position: relative;
+  right: 0;
+}
+
+.footer_img {
+  position: absolute;
+  right: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.footer_img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer_img-1 {
+  height: 300px;
+  width: 177px;
+  top: -150px;
+  left: -30px;
+}
+
+.footer_img-2 {
+  height: 250px;
+  width: 177px;
+  top: -260px;
+  left: 160px;
+}
+
+.footer_img-3 {
+  height: 101px;
+  width: 177px;
+  left: 160px;
+}
+
+@media screen and (width > 1020px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .main__section {
+    height: calc(100dvh - 78px);
+    flex-wrap: nowrap;
+  }
+
+  .main__section-text {
+    position: absolute;
+    width: auto;
+  }
+}
+
+@media screen and (width <= 1020px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .national-geo-page {
+    overflow: scroll;
+  }
+
+  .main__section-text {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .main__section-img {
+    display: none;
+  }
+
+  .footer {
+    position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer__img-container {
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .footer_img {
+    position: static;
+    width: 30%;
+    min-width: 300px;
+    height: 300px;
+    margin: 1rem 0.5rem;
+  }
+
+  .footer_img img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@media screen and (width <= 768px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 0.25rem;
+  }
+
+  .main__section-text {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .main__section-img {
+    display: none;
+  }
+
+  .footer__text {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer__text > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid #fff;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .footer__text > div:last-child {
+    width: auto;
+    padding-left: 0;
+    font-size: 12px;
+    padding-top: 1rem;
+  }
+}
