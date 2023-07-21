@@ -4,7 +4,7 @@ export default function NationalGeographic() {
       <div className="container">
         <header>
           <div className="logo">
-            <img src="images/national-geographic.png" />
+            <img src="images/national-geographic.png" decoding="async" />
           </div>
 
           <div className="nav-menu">
@@ -18,7 +18,7 @@ export default function NationalGeographic() {
             </nav>
 
             <button>
-              <img src="icons/search-icon.svg" />
+              <img src="icons/search-icon.svg" decoding="async" />
             </button>
           </div>
         </header>
@@ -31,7 +31,7 @@ export default function NationalGeographic() {
           </div>
 
           <div className="main__section-img">
-            <img src="/images/tiger.png" />
+            <img src="/images/tiger.png" decoding="async" />
           </div>
         </section>
 
@@ -52,13 +52,13 @@ export default function NationalGeographic() {
 
           <div className="footer__img-container">
             <div className="footer_img footer_img-1">
-              <img src="/images/elephant.png" />
+              <img src="/images/elephant.png" decoding="async" />
             </div>
             <div className="footer_img footer_img-2">
-              <img src="/images/fox.png" />
+              <img src="/images/fox.png" decoding="async" />
             </div>
             <div className="footer_img footer_img-3">
-              <img src="/images/animal.png" />
+              <img src="/images/animal.png" decoding="async" />
             </div>
           </div>
         </div>
