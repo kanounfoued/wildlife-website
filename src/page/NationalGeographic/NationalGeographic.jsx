@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export default function NationalGeographic() {
+  const [isBurgerOpen, setBurgerOpen] = useState(false);
+
+  function onClickBurgerButton() {
+    setBurgerOpen((prevState) => !prevState);
+  }
+
   return (
     <div className="national-geo-page">
       <div className="container">
@@ -7,9 +15,29 @@ export default function NationalGeographic() {
             <img src="images/national-geographic.png" decoding="async" />
           </div>
 
+          <div className="m-nav-menu">
+            <button>
+              <img src="icons/search-icon.svg" decoding="async" />
+            </button>
+            <button onClick={onClickBurgerButton}>
+              <img src="icons/bars-icon.svg" decoding="async" />
+            </button>
+          </div>
+
           <div className="nav-menu">
             <nav>
-              <ul>
+              <ul className="d-ul-menu">
+                <li className="active">home</li>
+                <li>gallery</li>
+                <li>about</li>
+                <li>subscribe</li>
+              </ul>
+
+              <ul
+                className={`m-ul-menu ${
+                  isBurgerOpen ? "m-menu-show" : "m-menu-close"
+                }`}
+              >
                 <li className="active">home</li>
                 <li>gallery</li>
                 <li>about</li>

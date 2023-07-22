@@ -42,6 +42,11 @@ header {
 .nav-menu {
   display: flex;
   align-items: center;
+  z-index: 1;
+}
+
+.nav-menu .m-ul-menu {
+  display: none;
 }
 
 .nav-menu nav {
@@ -76,6 +81,66 @@ header {
 
 .nav-menu button {
   padding: 0.25rem;
+}
+
+.m-nav-menu {
+  display: none;
+}
+
+@media screen and (width <= 768px) {
+  .nav-menu {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-menu nav {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-menu .d-ul-menu {
+    display: none;
+  }
+
+  .nav-menu .m-ul-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .m-menu-show {
+    max-height: 122px !important;
+  }
+
+  .m-menu-close {
+    max-height: 0 !important;
+  }
+
+  .m-nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .m-nav-menu button {
+    padding: 0.5rem 1rem;
+  }
+
+  .m-nav-menu button:last-child {
+    border: 1px solid;
+    border-radius: 0.5rem;
+  }
+
+  .nav-menu li.active::after {
+    display: none;
+  }
+
+  .nav-menu button {
+    display: none;
+  }
 }
 
 .main__section {
