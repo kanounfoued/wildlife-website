@@ -2,6 +2,10 @@
 v: 0
 micros:
   - name: wildlife-website
-    src: ./
+    src: ./main.jsx
     engine: nodejs16
     primary: true
+    commands:
+      - yarn run build
+    serve: dist
+    dev: yarn run dev -- --port $PORT
