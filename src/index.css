@@ -34,7 +34,7 @@
 
 header {
   background-color: #000;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   flex-wrap: wrap;
 }

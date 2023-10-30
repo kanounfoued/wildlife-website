@@ -3,8 +3,9 @@ v: 0
 micros:
   - name: wildlife-website
     src: ./
-    engine: react
+    engine: static
     dev: yarn dev
-    run: "yarn build && yarn preview"
-    serve: dist/
     primary: true
+    commands:
+      - yarn run build
+    serve: dist
